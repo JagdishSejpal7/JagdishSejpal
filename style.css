@@ -866,8 +866,13 @@ footer {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .hero-actions {
     justify-content: center;
+  }
+
+  .hero-right {
+    margin-top: 24px;
   }
 }
 
@@ -876,24 +881,78 @@ footer {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .about-bg-text {
+    font-size: 4rem;
     left: 50%;
     transform: translateX(-50%);
+    bottom: -10px;
   }
 }
 
+/* Mobile tweaks */
 @media (max-width: 600px) {
+  .section {
+    padding: 70px 12px;
+  }
+
   .section-inner {
-    padding: 28px 18px;
+    padding: 24px 16px;
+    border-radius: 18px;
   }
+
   .hero-name {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
+    letter-spacing: 0.12em;
   }
-  .section-title {
-    font-size: 1.6rem;
+
+  .hero-tagline {
+    font-size: 0.95rem;
   }
+
+  .hero-orbit {
+    width: 230px;
+    height: 230px;
+  }
+
+  .about-bg-text {
+    display: none; /* hide giant JS text on mobile */
+  }
+
+  .timeline {
+    padding-left: 18px;
+  }
+
+  .timeline li::before {
+    left: -22px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .contact-links a,
+  .primary-btn,
+  .ghost-btn,
+  .resume-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Chatbot full width bottom panel */
   .chatbot {
-    width: calc(100vw - 40px);
-    right: 20px;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    max-height: 60vh;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .chatbot-toggle {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  #terminalOverlay {
+    font-size: 0.8rem;
   }
 }
