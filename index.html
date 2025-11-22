@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jagdish S Sejpal | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div id="scrollBar"></div>
+
+  <!-- Boot Screen -->
+  <div id="bootScreen">
+    <div class="boot-window">
+      <p class="boot-line">Booting interface...</p>
+      <p class="boot-line">Loading modules...</p>
+      <p class="boot-line">> Ready</p>
+    </div>
+  </div>
+
+  <!-- Background layers & cursor -->
+  <div class="bg-layer bg-layer-1"></div>
+  <div class="bg-layer bg-layer-2"></div>
+  <div class="cursor-glow"></div>
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation -->
+  <header class="top-nav">
+    <div class="logo">Jagdish<span>.</span></div>
+    <nav class="nav-links">
+      <button data-scroll="#hero" class="nav-link">Home</button>
+      <button data-scroll="#about" class="nav-link">About</button>
+      <button data-scroll="#skills" class="nav-link">Skills</button>
+      <button data-scroll="#timeline" class="nav-link">Timeline</button>
+      <button data-scroll="#contact" class="nav-link">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="section hero-section reveal">
+      <div class="section-inner hero-layout">
+        <div class="hero-left">
+          <h1 class="hero-name">Jagdish S Sejpal</h1>
+          <p class="hero-tagline">
+            <span id="typewriter"></span><span class="caret">|</span>
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn" data-scroll="#skills">View Skills</button>
+            <button class="ghost-btn" data-scroll="#contact">Contact Me</button>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-orbit">
+            <div class="orbit-ring orbit-ring-1"></div>
+            <div class="orbit-ring orbit-ring-2"></div>
+            <div class="orbit-core"><span class="core-text">JS</span></div>
+            <div class="orbit-node orbit-node-1"></div>
+            <div class="orbit-node orbit-node-2"></div>
+            <div class="orbit-node orbit-node-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section reveal">
+      <div class="section-inner about-layout">
+        <div class="about-text">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-text fade-up">
+            I’m a <span class="highlight">BSc IT student</span> blending
+            <span class="highlight">coding</span>, <span class="highlight">ethical hacking</span>,
+            and <span class="highlight">design</span> to build futuristic experiences.
+          </p>
+          <p class="section-text fade-up">
+            I learn by experimenting, breaking and rebuilding systems.
+          </p>
+          <p class="section-text fade-up">
+            My goal: develop AI-driven tools and systems that feel ahead of time.
+          </p>
+          <p class="learning-now">
+            <span id="learningText">Currently Exploring: TensorFlow Fundamentals</span>
+          </p>
+        </div>
+        <div class="about-card">
+          <p><span>Age:</span> 18</p>
+          <p><span>Focus:</span> Cloud & App Dev</p>
+          <p><span>Next Goal:</span> Build AI Model</p>
+        </div>
+        <div class="about-bg-text">JS</div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section reveal">
+      <div class="section-inner">
+        <h2 class="section-title">Skills</h2>
+        <div class="skill-container">
+          <div class="skill">
+            <span>HTML</span><span>100%</span>
+            <div class="bar"><div data-width="100"></div></div>
+          </div>
+          <div class="skill">
+            <span>CSS</span><span>80%</span>
+            <div class="bar"><div data-width="80"></div></div>
+          </div>
+          <div class="skill">
+            <span>JavaScript</span><span>75%</span>
+            <div class="bar"><div data-width="75"></div></div>
+          </div>
+          <div class="skill">
+            <span>Virtual Machines</span><span>100%</span>
+            <div class="bar"><div data-width="100"></div></div>
+          </div>
+          <div class="skill">
+            <span>AWS</span><span>35%</span>
+            <div class="bar"><div data-width="35"></div></div>
+          </div>
+          <div class="skill">
+            <span>Ethical Hacking</span><span>30%</span>
+            <div class="bar"><div data-width="30"></div></div>
+          </div>
+          <div class="skill">
+            <span>MS Office</span><span>80%</span>
+            <div class="bar"><div data-width="80"></div></div>
+          </div>
+          <div class="skill">
+            <span>Photoshop</span><span>60%</span>
+            <div class="bar"><div data-width="60"></div></div>
+          </div>
+          <div class="skill">
+            <span>Canva</span><span>100%</span>
+            <div class="bar"><div data-width="100"></div></div>
+          </div>
+          <div class="skill">
+            <span>Adobe Premiere Pro</span><span>50%</span>
+            <div class="bar"><div data-width="50"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="section reveal">
+      <div class="section-inner">
+        <h2 class="section-title">Experience Timeline</h2>
+        <ul class="timeline">
+          <li>Jan 2020 – Started JavaScript</li>
+          <li>Jun 2023 – Started HTML</li>
+          <li>Jul 2023 – Started CSS</li>
+          <li>Aug 2023 – Began Ethical Hacking</li>
+          <li>Jan 2025 – AI Model Experiments</li>
+          <li>Mar 2025 – Cloud & Virtual Machines</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section reveal">
+      <div class="section-inner">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-text center">
+          Reach out if you want to talk about projects, ideas or building futuristic stuff.
+        </p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/jagdish-sejpal-538290347" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/jagdishsejpal_" target="_blank">Instagram</a>
+          <a href="mailto:jagdish.sejpal2008@gmail.com">Email</a>
+        </div>
+        <button class="resume-btn" onclick="window.open('YOUR_RESUME_LINK_HERE', '_blank')">
+          ⬇ Download Resume
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Jagdish • Built with HTML, CSS & JavaScript
+  </footer>
+
+  <!-- Terminal Overlay -->
+  <div id="terminalOverlay">
+    <div class="terminal-window">
+      <pre id="terminalOutput">Jagdish-OS v5.0 initialized</pre>
+      <input id="terminalInput" type="text" placeholder="> type command..." autofocus />
+    </div>
+  </div>
+
+  <!-- Chatbot -->
+  <div id="chatbotToggle" class="chatbot-toggle">🤖</div>
+  <div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+      <span>Jagdish Assistant</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="chatbot-message bot">
+        Hi, I’m Jagdish’s assistant. Ask me about him, his skills, or even simple math (like 5 * 10).
+      </div>
+    </div>
+    <div class="chatbot-input-row">
+      <input id="chatbotInput" type="text" placeholder="Type your question..." />
+      <button id="chatbotSend">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
